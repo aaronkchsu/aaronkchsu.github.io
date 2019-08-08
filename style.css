@@ -109,10 +109,9 @@ h2 {
   background: url("coverimage.jpg");
   background-size: cover;
 
-    /* Set up proportionate scaling */
+  /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-
   height: 800px;
 }
 
@@ -255,16 +254,119 @@ main {
   text-align: left;
   width: 30em;
   font-size: 70%;
-    float: left;
-	  margin-bottom: 3em;
+  float: left;
+	margin-bottom: 3em;
   font-family: sans-serif;
 }
 .test{
 	margin-left: 2em;
 }
 
-#content {
+.slant_row {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #3454D1;
+  color: #fff;
+  height: 200px;
+  text-align: center;
+}
 
+.slant_row::after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(4.0deg);
+  transform-origin: 0%;
+  z-index: -1;
+}
+
+.harsh_slant_row {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #3454D1;
+  color: #fff;
+  text-align: center;
+}
+
+.harsh_slant_row::after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(4.0deg);
+  transform-origin: 0%;
+  z-index: -1;
+}
+
+.both_slant_row {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #34D1BF;
+  color: #000;
+  height: 200px;
+  text-align: center;
+}
+
+.both_slant_row::before {
+  background: inherit;
+  top: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-4.0deg);
+  transform-origin: -0%;
+  z-index: -1;
+}
+
+.both_slant_row::after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-4.0deg);
+  transform-origin: 100%;
+  z-index: -1;
+}
+
+.home_row {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  z-index: -2;
+  height: 300px;
+  text-align: center;
 }
 
 #cp {
@@ -272,7 +374,6 @@ main {
 	margin-right: auto;
 	font-size: 60%;
 }
-
 
 footer {
   width: 35em;
@@ -306,7 +407,7 @@ footer ul a img {
   transition: .5s ease-in-out;
 }
 
-footer ul a img:hover {
-  width: 45px;
-  height: 45px;
+p {
+  max-width: 800px;
+  padding: 4px;
 }
