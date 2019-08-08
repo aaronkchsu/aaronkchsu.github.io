@@ -275,6 +275,10 @@ main {
   text-align: center;
 }
 
+.slant_row a {
+  color: #34D1BF;
+}
+
 .slant_row::after {
   background: inherit;
   bottom: 0;
