@@ -108,7 +108,7 @@ h2 {
   position: relative;
   background: url("coverimage.jpg");
   background-size: cover;
-
+  z-index: -1;
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
@@ -273,6 +273,20 @@ main {
   color: #fff;
   height: 200px;
   text-align: center;
+}
+
+.slant_row::before {
+  background: inherit;
+  top: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(4.0deg);
+  transform-origin: 100%;
+  z-index: -1;
 }
 
 .slant_row a {
